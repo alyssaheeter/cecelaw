@@ -1,0 +1,74 @@
+{
+  "criminalDefense": [
+    {
+      "slug": "dui",
+      "name": "DUI Defense",
+      "summary": "Strategic defense focused on protecting your license, livelihood, and future.",
+      "faqs": [
+        {
+          "q": "How fast do I need to act after a DUI arrest in Illinois?",
+          "a": "Immediately. License-related timelines can move quickly, and early counsel helps preserve options."
+        },
+        {
+          "q": "Can I drive while my DUI case is pending?",
+          "a": "It depends on your license status and court/administrative requirements. A lawyer can explain eligibility and next steps."
+        }
+      ]
+    },
+    {
+      "slug": "serious-felonies",
+      "name": "Serious Felonies",
+      "summary": "High-stakes defense for charges that threaten freedom and reputation.",
+      "faqs": []
+    },
+    {
+      "slug": "misdemeanors",
+      "name": "Misdemeanors",
+      "summary": "Measured defense aimed at minimizing long-term consequences.",
+      "faqs": []
+    },
+    {
+      "slug": "reckless-homicide",
+      "name": "Reckless Homicide",
+      "summary": "Careful, experienced handling of complex and emotionally charged cases.",
+      "faqs": []
+    }
+  ],
+  "personalInjury": [
+    {
+      "slug": "auto-truck-accidents",
+      "name": "Auto & Truck Accidents",
+      "summary": "Handling insurers while you focus on recovery.",
+      "faqs": [
+        {
+          "q": "Do I have to talk to the other driver’s insurance company?",
+          "a": "You may be contacted quickly; it’s often safer to get legal advice before giving recorded statements."
+        }
+      ]
+    },
+    {
+      "slug": "premises-liability",
+      "name": "Premises Liability",
+      "summary": "Slip-and-fall and unsafe property claims.",
+      "faqs": []
+    },
+    {
+      "slug": "dog-bites",
+      "name": "Dog Bites",
+      "summary": "Advocacy for victims dealing with injury and scarring.",
+      "faqs": []
+    },
+    {
+      "slug": "medical-malpractice",
+      "name": "Medical Malpractice",
+      "summary": "Selective handling of complex medical negligence cases; may involve co-counsel depending on the matter.",
+      "faqs": []
+    },
+    {
+      "slug": "wrongful-death",
+      "name": "Wrongful Death",
+      "summary": "Pursuing accountability after devastating loss.",
+      "faqs": []
+    }
+  ]
+}

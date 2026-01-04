@@ -1,0 +1,40 @@
+{
+  "siteName": "Cece Law",
+  "tagline": "Aggressive in the arena. Accessible to you.",
+  "primaryPhone": "(312) 922-0400",
+  "mobilePhone": "(312) 296-4622",
+  "email": "fcece@cecelaw.com",
+  "offices": [
+    {
+      "label": "Palos Heights Office",
+      "address": "7808 W. College Drive, Suite 4SE / 4SW, Palos Heights, IL 60463"
+    },
+    {
+      "label": "Chicago Office",
+      "address": "53 W. Jackson Boulevard, Suite 1430, Chicago, IL 60604"
+    }
+  ],
+  "serviceArea": {
+    "primaryCities": ["Palos Heights", "Bridgeview", "Oak Lawn", "Orland Park", "Tinley Park"],
+    "counties": ["Cook", "Will", "DuPage"]
+  },
+  "theme": {
+    "palette": {
+      "bgCharcoal": "#231f20",
+      "accentSteel": "#9996b3",
+      "textPrimary": "#fcfcfc",
+      "textSecondary": "#d1d0db",
+      "glassWhite": "rgba(255,255,255,0.05)"
+    },
+    "fonts": {
+      "headings": "Marcellus",
+      "body": "Lato"
+    },
+    "transition": "400ms cubic-bezier(0.25, 1, 0.5, 1)"
+  },
+  "disclaimers": [
+    "Attorney Advertising.",
+    "Past results do not guarantee future outcomes.",
+    "This website provides general information and does not create an attorney-client relationship."
+  ]
+}

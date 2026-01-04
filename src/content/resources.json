@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "dui-license-suspension-illinois",
+    "title": "Illinois DUI: License Suspension Basics",
+    "summary": "Plain-English overview of license-related consequences and why timing matters.",
+    "type": "guide",
+    "faqs": [
+      { "q": "Is license suspension automatic after a DUI arrest?", "a": "It depends on the situation and the administrative process. Timing matters; consult counsel early." }
+    ]
+  },
+  {
+    "slug": "what-to-do-after-car-accident-illinois",
+    "title": "What to Do After a Car Accident in Illinois",
+    "summary": "A practical checklist to protect your health, evidence, and claim.",
+    "type": "checklist",
+    "faqs": [
+      { "q": "What should I do first after a crash?", "a": "Get medical help if needed, call police, document the scene, and avoid recorded statements until you understand your options." }
+    ]
+  }
+]

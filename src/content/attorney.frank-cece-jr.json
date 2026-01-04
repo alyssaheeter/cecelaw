@@ -1,0 +1,27 @@
+{
+  "name": "Frank Cece, Jr.",
+  "title": "Attorney",
+  "focus": ["Criminal Defense", "Serious Felonies", "DUI", "Personal Injury"],
+  "education": [
+    "J.D., The John Marshall Law School (1991)",
+    "B.A., Loyola University Chicago (1987)"
+  ],
+  "admissions": [
+    "Illinois (1991)",
+    "U.S. District Court, Northern District of Illinois (1992)",
+    "U.S. Court of Appeals, Seventh Circuit (year omitted due to variance)"
+  ],
+  "memberships": ["NACDL", "ABA", "CBA"],
+  "recognition": ["Super Lawyers (2019–present per provided materials)"],
+  "bioShort": "Veteran trial attorney serving Chicago and the South/Southwest suburbs, focused on serious criminal defense and injury matters.",
+  "bioLongSections": [
+    {
+      "heading": "Aggressive in the arena, grounded in preparation",
+      "body": "Emphasize investigation, motion practice, negotiation strategy, and trial readiness without promising outcomes."
+    },
+    {
+      "heading": "Accessible counsel and straight talk",
+      "body": "Explain communication standards: clear options, fast callbacks, respectful guidance under pressure."
+    }
+  ]
+}
