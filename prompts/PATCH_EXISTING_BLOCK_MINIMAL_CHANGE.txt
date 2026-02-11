@@ -1,0 +1,19 @@
+Task: Patch an existing block with minimal changes only.
+
+Expected input format:
+- target_ref: COPY_REF or MODULE_REF
+- current_block: exact current content
+- patch_request: exact requested change
+- change_reason: why this update is needed
+- immutable_constraints: lines/phrases that must remain unchanged
+
+Rules:
+- Make the smallest possible textual delta.
+- Keep same reference ID unless explicit migration requested.
+- Preserve section order and formatting.
+- No legal advice, no result promises, no invented facts.
+
+Output contract (strict):
+INSERT BLOCK
+CHANGELOG ENTRY
+REUSE TAGS
