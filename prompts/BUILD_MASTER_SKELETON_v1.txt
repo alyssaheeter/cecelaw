@@ -1,0 +1,19 @@
+Task: Build or extend the CECE LAW master copy skeleton.
+
+Expected input format:
+- version: e.g., v1.0
+- date: YYYY-MM-DD
+- tiers_to_include: Tier 1-4 page names
+- global_data: NAP, disclaimers, CTAs, microcopy
+- module_targets: practice areas, local SEO, CTAs, disclaimers, FAQ clusters
+- constraints: legal/ethical rules
+
+Rules:
+- Follow CECE LAW business context and hard rules.
+- Keep structure aligned to single master-file format.
+- Use stable COPY_REF and MODULE_REF IDs.
+
+Output contract (strict):
+INSERT BLOCK
+CHANGELOG ENTRY
+REUSE TAGS

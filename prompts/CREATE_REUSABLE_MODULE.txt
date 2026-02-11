@@ -1,0 +1,19 @@
+Task: Create a new reusable module for CECE LAW master file.
+
+Expected input format:
+- module_category: PRACTICE_AREA / LOCAL_SEO / CTA / DISCLAIMER / FAQ
+- module_name: descriptive short name
+- use_case: where it should be applied
+- draft_copy_points: bullet facts or intent
+- variants_needed: A/B or none
+- constraints: compliance constraints
+
+Rules:
+- Emit [MODULE: ...] format with MODULE_REF.
+- Include Use Case, Copy, Variants (if needed), Constraints.
+- Ensure constraints prohibit promises and legal advice.
+
+Output contract (strict):
+INSERT BLOCK
+CHANGELOG ENTRY
+REUSE TAGS

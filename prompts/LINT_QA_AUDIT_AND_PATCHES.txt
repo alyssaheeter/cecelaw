@@ -1,0 +1,18 @@
+Task: Run lint-style QA audit on provided copy and generate patches if needed.
+
+Expected input format:
+- copy_block: page or module block
+- lint_scope: SEO / ethics / formatting / output contract
+- known_issues: optional list
+- target_ref: COPY_REF or MODULE_REF
+
+Rules:
+- Validate SEO title/meta lengths, H1 uniqueness, ethics-safe language.
+- Verify hard constraints (no legal advice, no promises, no invented facts).
+- If compliant, emit unchanged insert block.
+- If non-compliant, emit corrected minimal patch.
+
+Output contract (strict):
+INSERT BLOCK
+CHANGELOG ENTRY
+REUSE TAGS

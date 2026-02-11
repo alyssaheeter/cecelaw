@@ -1,0 +1,15 @@
+{
+  "prompt_name": "EXTRACT_PAGE_TO_INSERT_BLOCK",
+  "tier": "T1",
+  "page_or_module": "homepage",
+  "target_ref": "T1.HOME.CORE",
+  "model": "gemini-2.5-pro",
+  "temperature": 0.1,
+  "use_mock_when_no_api_key": true,
+  "request_payload": {
+    "page_name": "HOME",
+    "copy_ref": "T1.HOME.CORE",
+    "required_sections": ["HERO", "PROOF", "PROCESS", "FAQ", "CTA_CLOSE"],
+    "notes": "Generate paste-ready homepage block aligned to Trusted Authority voice."
+  }
+}

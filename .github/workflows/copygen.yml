@@ -1,0 +1,70 @@
+name: copygen
+
+on:
+  workflow_dispatch:
+    inputs:
+      request_path:
+        description: "Request file path (e.g., requests/example_homepage.json)"
+        required: true
+        default: "requests/example_homepage.json"
+      create_pr:
+        description: "Create PR with generated outputs"
+        type: boolean
+        required: false
+        default: false
+  push:
+    paths:
+      - "requests/**"
+      - "prompts/**"
+      - "inputs/**"
+      - "scripts/copygen/**"
+      - ".github/workflows/copygen.yml"
+
+jobs:
+  run-copygen:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/copygen/requirements.txt
+
+      - name: Resolve request path
+        id: req
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "request=${{ inputs.request_path }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "request=requests/example_homepage.json" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run copygen
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/copygen/run.py --request "${{ steps.req.outputs.request }}"
+
+      - name: Upload generated artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-copy
+          path: generated/
+
+      - name: Create pull request with generated outputs
+        if: github.event_name == 'workflow_dispatch' && inputs.create_pr == true
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "chore(copygen): add generated outputs"
+          branch: "copygen/generated-${{ github.run_id }}"
+          title: "chore(copygen): generated copy outputs"
+          body: |
+            Adds generated copy artifacts from copygen workflow run.

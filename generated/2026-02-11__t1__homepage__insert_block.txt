@@ -1,0 +1,19 @@
+[PAGE: HOMEPAGE]
+COPY_REF: T1.HOME.CORE
+SEO Title: Criminal Defense Attorney in [City] | CECE LAW
+Meta Description: Former Prosecutor criminal defense representation in [City]. Contact CECE LAW for strategic case planning.
+H1: Criminal Defense Representation Built for High-Stakes Cases
+[SECTION: HERO]
+Former Prosecutor perspective. Direct, strategic defense.
+[SECTION: PROOF]
+PracticePanther-supported intake and communication workflow.
+[SECTION: PROCESS]
+1) Intake 2) Review 3) Strategy 4) Ongoing preparation
+[SECTION: FAQ]
+Q1: Is this legal advice?
+A1: No. Informational only.
+[SECTION: CTA_CLOSE]
+Book a confidential consultation.
+Microcopy:
+- Button labels: Book consultation, Call now
+- Form labels: Full name, Phone, Email, Case summary
