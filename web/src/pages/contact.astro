@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Contact Cece Law" description="Contact Cece Law for a confidential consultation request.">
+  <section class="section">
+    <h1>Contact Cece Law</h1>
+    <p>Use the form for non-confidential, non-time-sensitive information. For urgent issues, call immediately.</p>
+    <p><a href="tel:3129220400" class="btn btn-primary" data-track="tel">Call Now</a> <a href="mailto:[FILL-IN_CONTACT_EMAIL]?subject=Consultation%20Request" class="btn btn-secondary">Email Fallback</a></p>
+  </section>
+
+  <section class="section">
+    <h2>Consultation Request Form</h2>
+    <form action="[FILL-IN_FORMSPREE_ENDPOINT]" method="POST">
+      <input type="hidden" name="_next" value="/thank-you" />
+      <label>Name<input required name="name" autocomplete="name" /></label>
+      <label>Phone<input required name="phone" type="tel" autocomplete="tel" /></label>
+      <label>Email<input required name="email" type="email" autocomplete="email" /></label>
+      <label>Matter Type
+        <select name="matterType" required>
+          <option value="">Select one</option>
+          <option>Criminal Defense</option>
+          <option>DUI / Traffic</option>
+          <option>Personal Injury</option>
+          <option>Other [FILL-IN]</option>
+        </select>
+      </label>
+      <label>Message<textarea required name="message" rows="6"></textarea></label>
+      <label class="hp" aria-hidden="true">Leave this blank<input tabindex="-1" name="company" /></label>
+      <input type="submit" value="Send Request" data-track="form-submit" />
+    </form>
+    <p class="small">This form does not create an attorney-client relationship. Do not submit confidential details.</p>
+  </section>
+</BaseLayout>
