@@ -1,0 +1,125 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const gtmId = import.meta.env.PUBLIC_GTM_ID;
+const canonical = Astro.url;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': ['LegalService', 'LocalBusiness'],
+  name: 'Cece Law',
+  image: '/assets/logo.png',
+  url: canonical.href,
+  telephone: '+1-312-922-0400',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '7808 W College Dr, Ste 4SE',
+    addressLocality: 'Palos Heights',
+    addressRegion: 'IL',
+    postalCode: '60463',
+    addressCountry: 'US'
+  },
+  areaServed: '[FILL-IN_SERVICE_AREA]',
+  attorney: '[FILL-IN_ATTORNEY_NAME]'
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:image" content="/assets/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href={canonical.href} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Marcellus&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
+    {gtmId && (
+      <script is:inline>
+        {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${gtmId}');`}
+      </script>
+    )}
+  </head>
+  <body>
+    {gtmId && <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`} height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>}
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="/">Cece Law</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/criminal-defense">Criminal Defense</a>
+          <a href="/dui-traffic">DUI & Traffic</a>
+          <a href="/personal-injury">Personal Injury</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/booking" data-track="booking">Booking</a>
+          <a href="/payments" data-track="payments">Payments</a>
+          <a href="tel:3129220400" class="btn btn-primary" data-track="tel">Call Now</a>
+        </nav>
+        <details class="mobile-nav">
+          <summary>Menu</summary>
+          <nav aria-label="Mobile Primary" class="card">
+            <p><a href="/criminal-defense">Criminal Defense</a></p>
+            <p><a href="/dui-traffic">DUI & Traffic</a></p>
+            <p><a href="/personal-injury">Personal Injury</a></p>
+            <p><a href="/about">About</a></p>
+            <p><a href="/contact">Contact</a></p>
+            <p><a href="/booking" data-track="booking">Booking</a></p>
+            <p><a href="/payments" data-track="payments">Payments</a></p>
+            <p><a href="tel:3129220400" class="btn btn-primary" data-track="tel">Call Now</a></p>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <main id="main-content">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="inner">
+        <nav aria-label="Footer">
+          <a href="/">Home</a>
+          <a href="/criminal-defense">Criminal Defense</a>
+          <a href="/dui-traffic">DUI & Traffic</a>
+          <a href="/personal-injury">Personal Injury</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/booking">Booking</a>
+          <a href="/payments">Payments</a>
+          <a href="/disclaimer">Disclaimer</a>
+        </nav>
+        <p class="small"><strong>Cece Law</strong> · 7808 W College Dr, Ste 4SE, Palos Heights, IL 60463 · <a href="tel:3129220400" data-track="tel">(312) 922-0400</a></p>
+        <p class="small">This website is informational only, does not create an attorney-client relationship, and does not guarantee outcomes.</p>
+      </div>
+    </footer>
+    <script is:inline>
+      {`window.dataLayer = window.dataLayer || [];
+const tracked = ['tel','primary-cta','booking','payments','form-submit'];
+document.addEventListener('click', (event) => {
+  const target = event.target.closest('[data-track]');
+  if (!target) return;
+  const key = target.getAttribute('data-track');
+  if (!tracked.includes(key)) return;
+  window.dataLayer.push({ event: 'cece_click', click_type: key, href: target.getAttribute('href') || null });
+});`}
+    </script>
+  </body>
+</html>

@@ -1,17 +1,48 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Cece Law | Criminal Defense and Personal Injury" description="Strategic criminal defense and personal injury representation from Cece Law in Palos Heights, Illinois.">
+  <section class="hero section" aria-labelledby="home-hero-title">
+    <div class="hero-media" aria-hidden="true">
+      <iframe src="https://www.youtube.com/embed/u31qwQUeGuM?autoplay=1&mute=1&controls=0&loop=1&playlist=u31qwQUeGuM&modestbranding=1&rel=0" title="Cece Law video background" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe>
+    </div>
+    <div class="hero-poster" aria-hidden="true">
+      <img src="/assets/logo.png" alt="" />
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1 id="home-hero-title">Focused Legal Guidance for High-Stakes Matters</h1>
+      <p>Cece Law supports clients facing criminal allegations and injury claims with clear communication, disciplined preparation, and practical next steps.</p>
+      <p>
+        <a href="tel:3129220400" class="btn btn-primary" data-track="tel">Call Now</a>
+        <a href="/contact" class="btn btn-secondary" data-track="primary-cta">Contact</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="practice-areas">
+    <h2 id="practice-areas">Practice Areas</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Criminal Defense</h3>
+        <p>Representation for charges and investigations with strategic case planning from day one.</p>
+        <a href="/criminal-defense">Learn more →</a>
+      </article>
+      <article class="card">
+        <h3>DUI &amp; Traffic</h3>
+        <p>Prompt review of stop details, testing procedures, and court timelines.</p>
+        <a href="/dui-traffic">Explore DUI &amp; traffic defense →</a>
+      </article>
+      <article class="card">
+        <h3>Personal Injury</h3>
+        <p>Guidance after injury incidents while claims, records, and deadlines are evaluated.</p>
+        <a href="/personal-injury">View injury representation →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section notice">
+    <p>Every legal matter is different. This website is informational only and does not create an attorney-client relationship or guarantee outcomes.</p>
+  </section>
+</BaseLayout>
