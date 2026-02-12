@@ -1,0 +1,17 @@
+{
+  "prompt_name": "PATCH_EXISTING_BLOCK_MINIMAL_CHANGE",
+  "tier": "T1",
+  "page_or_module": "[FILL-IN]",
+  "target_ref": "[FILL-IN COPY_REF_OR_MODULE_REF]",
+  "model": "gemini-2.5-pro",
+  "temperature": 0.1,
+  "request_payload": {
+    "change_reason": "[FILL-IN]",
+    "current_block": "[FILL-IN]",
+    "patch_request": "[FILL-IN]",
+    "immutable_constraints": [
+      "No legal advice",
+      "No outcome promises"
+    ]
+  }
+}

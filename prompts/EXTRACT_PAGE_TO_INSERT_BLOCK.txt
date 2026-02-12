@@ -1,0 +1,19 @@
+Task: Extract one page from the master file into a paste-ready block.
+
+Expected input format:
+- source_master_excerpt: text from master file
+- page_name: exact page name
+- copy_ref: exact COPY_REF
+- tier: T1/T2/T3/T4
+- required_sections: HERO, PROOF, PROCESS, FAQ, CTA_CLOSE
+
+Rules:
+- Preserve canonical wording unless explicitly instructed to revise.
+- Ensure SEO title/meta length hygiene and unique H1.
+- Keep microcopy included.
+- No legal advice, no promises.
+
+Output contract (strict):
+INSERT BLOCK
+CHANGELOG ENTRY
+REUSE TAGS
