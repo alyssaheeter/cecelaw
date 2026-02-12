@@ -1,0 +1,161 @@
+/* CECE LAW | DARK AUTHORITY REFACTOR */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Lato:wght@300;400;700;900&display=swap');
+
+:root {
+  --bg-charcoal: #231f20;
+  --accent-steel: #9996b3;
+  --text-primary: #fcfcfc;
+  --text-secondary: #d1d0db;
+  --glass-white: rgba(255, 255, 255, 0.05);
+  --transition-smooth: 400ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-charcoal);
+  color: var(--text-primary);
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-smooth);
+}
+
+a:hover {
+  color: var(--accent-steel);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Marcellus', serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+button {
+  font-family: 'Lato', sans-serif;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 2.8rem;
+  border-radius: 0;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  background: var(--accent-steel);
+  color: var(--bg-charcoal);
+  border: 1px solid var(--accent-steel);
+  transition: all var(--transition-smooth);
+  box-shadow: 0 12px 30px rgba(153, 150, 179, 0.35);
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--accent-steel);
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: 64px 0;
+}
+
+.card {
+  background: var(--glass-white);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px;
+  border-radius: 8px;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(153, 150, 179, 0.3);
+}
+
+.quote-block {
+  background: var(--glass-white);
+  border-top: 2px solid var(--accent-steel);
+  border-bottom: 2px solid var(--accent-steel);
+  text-align: center;
+  padding: 24px;
+}
+
+input, textarea {
+  background: var(--glass-white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  color: var(--text-primary);
+  width: 100%;
+  border-radius: 4px;
+  transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent-steel);
+  box-shadow: 0 0 0 3px rgba(153, 150, 179, 0.25);
+}
+
+label {
+  color: var(--accent-steel);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+img {
+  filter: grayscale(20%);
+  transition: filter var(--transition-smooth), transform var(--transition-smooth);
+}
+
+img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.01);
+}
+
+.nav-link {
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  color: var(--text-primary);
+  padding: 12px;
+}
+
+.nav-link:hover {
+  color: var(--accent-steel);
+}
+
+.nav-cta {
+  border: 1px solid var(--accent-steel);
+  color: var(--accent-steel);
+  padding: 10px 18px;
+  transition: background var(--transition-smooth), color var(--transition-smooth), transform var(--transition-smooth);
+}
+
+.nav-cta:hover {
+  background: var(--accent-steel);
+  color: var(--bg-charcoal);
+  transform: translateY(-2px);
+}
+
+.container {
+  width: min(1200px, 94%);
+  margin: 0 auto;
+}
