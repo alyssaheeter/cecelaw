@@ -1,0 +1,24 @@
+Task: Create a reusable CECE LAW module for master file.
+
+Expected input:
+- module_category
+- module_name
+- use_case
+- copy points
+- variants_needed
+- constraints
+
+Requirements:
+- Output module block using:
+  [MODULE: <MODULE NAME>]
+  MODULE_REF: MOD.<CATEGORY>.<NAME>_v1
+  Use Case:
+  Copy:
+  Variants (if needed): A / B
+  Constraints:
+- Keep language compliance-safe and no promises.
+
+Output contract:
+INSERT BLOCK
+CHANGELOG ENTRY
+REUSE TAGS

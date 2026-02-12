@@ -1,0 +1,19 @@
+Task: Patch an existing page/module with minimal textual change only.
+
+Expected input:
+- target_ref (COPY_REF or MODULE_REF)
+- current_block
+- requested_change
+- reason_for_change
+- immutable_lines
+
+Requirements:
+- Keep the same reference ID unless migration is explicitly requested.
+- Preserve existing section order and headings.
+- Keep change set minimal and auditable.
+- Preserve compliance constraints.
+
+Output contract:
+INSERT BLOCK
+CHANGELOG ENTRY
+REUSE TAGS

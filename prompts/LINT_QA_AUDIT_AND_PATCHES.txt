@@ -1,0 +1,19 @@
+Task: Lint and QA an insert/module block, then patch if needed.
+
+Expected input:
+- target_ref
+- copy_block
+- lint_scope
+- known_issues (optional)
+
+Requirements:
+- Validate contract-compatible structure.
+- Validate no legal advice, no outcomes promised, no fabricated facts.
+- Validate SEO title/meta length targets and unique H1.
+- Validate ethics-safe local language.
+- If valid, return unchanged block; otherwise minimal correction.
+
+Output contract:
+INSERT BLOCK
+CHANGELOG ENTRY
+REUSE TAGS

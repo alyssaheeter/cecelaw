@@ -1,0 +1,21 @@
+:root {
+  --cl-black: #000000;
+  --cl-graphite: #161616;
+  --cl-plum-black: #181315;
+  --cl-orchid-a: #8a7cb7;
+  --cl-orchid-b: #897cb6;
+  --cl-fog: #e7e7e7;
+  --cl-silver: #a4a4a4;
+
+  --color-text-heading: var(--cl-black);
+  --color-text-body: var(--cl-graphite);
+  --color-bg-default: #ffffff;
+  --color-bg-alt: var(--cl-fog);
+  --color-border-default: var(--cl-silver);
+
+  --color-cta-primary-bg: var(--cl-orchid-a);
+  --color-cta-primary-bg-hover: var(--cl-orchid-b);
+  --color-cta-primary-text: var(--cl-black);
+  --color-cta-secondary-border: var(--cl-orchid-a);
+  --color-cta-secondary-text: var(--cl-orchid-a);
+}

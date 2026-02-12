@@ -1,0 +1,20 @@
+Task: Extract one page block from master file for paste-ready Squarespace implementation.
+
+Expected input:
+- source_master_excerpt
+- page_name
+- copy_ref
+- tier
+- requested section edits (optional)
+
+Requirements:
+- Preserve COPY_REF format <TIER>.<PAGE>.<SECTIONSET>_v1
+- Preserve section order:
+  HERO -> TRUST_BAR -> SERVICES_OVERVIEW -> PROOF -> PROCESS -> FAQ -> CTA_CLOSE
+- Include Microcopy fields (Button labels + Form labels)
+- Keep compliance and SEO hygiene constraints
+
+Output contract:
+INSERT BLOCK
+CHANGELOG ENTRY
+REUSE TAGS

@@ -1,0 +1,25 @@
+Task: Build or extend CECE LAW master copy skeleton.
+
+Expected input:
+- version
+- date
+- page map (Tier 1-4)
+- global sections data (NAP/disclaimers/CTAs/microcopy)
+- module targets
+
+Requirements:
+- Use COPY_REF format: <TIER>.<PAGE>.<SECTIONSET>_v1
+- Include page sections in order:
+  [SECTION: HERO]
+  [SECTION: TRUST_BAR]
+  [SECTION: SERVICES_OVERVIEW]
+  [SECTION: PROOF]
+  [SECTION: PROCESS]
+  [SECTION: FAQ]
+  [SECTION: CTA_CLOSE]
+- Use module format with MODULE_REF: MOD.<CATEGORY>.<NAME>_v1
+
+Output contract:
+INSERT BLOCK
+CHANGELOG ENTRY
+REUSE TAGS
