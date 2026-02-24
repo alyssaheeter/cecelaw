@@ -1,0 +1,79 @@
+mutation CreateDemoData @transaction {
+  user_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440000",
+      email: "client1@example.com",
+      displayName: "Client One",
+      createdAt: "2023-01-01T00:00:00Z",
+      role: "client"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440001",
+      email: "lawyer1@example.com",
+      displayName: "Lawyer One",
+      createdAt: "2023-01-01T00:00:00Z",
+      role: "lawyer"
+    }
+  ])
+  service_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440002",
+      name: "Family Law Consultation",
+      description: "Initial consultation for family law matters.",
+      createdAt: "2023-01-01T00:00:00Z",
+      priceRange: "$100 - $200"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440003",
+      name: "Estate Planning",
+      description: "Comprehensive estate planning services.",
+      createdAt: "2023-01-05T00:00:00Z",
+      priceRange: "$500 - $1000"
+    }
+  ])
+  case_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440004",
+      caseNumber: "CASE-2023-001",
+      status: "Open",
+      createdAt: "2023-01-10T00:00:00Z",
+      updatedAt: "2023-01-10T00:00:00Z",
+      description: "Divorce proceedings for Client One.",
+      startDate: "2023-01-10",
+      clientId: "550e8400-e29b-41d4-a716-446655440000",
+      lawyerId: "550e8400-e29b-41d4-a716-446655440001"
+    }
+  ])
+  document_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440005",
+      fileName: "DivorcePetition.pdf",
+      fileUrl: "https://example.com/documents/divorce_petition.pdf",
+      uploadedAt: "2023-01-12T00:00:00Z",
+      description: "Initial divorce petition filing.",
+      caseId: "550e8400-e29b-41d4-a716-446655440004"
+    }
+  ])
+  testimonial_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440006",
+      quote: "Lawyer One provided excellent service and guidance.",
+      clientName: "Client One",
+      createdAt: "2023-02-01T00:00:00Z",
+      isApproved: true,
+      clientTitle: "Satisfied Client",
+      clientId: "550e8400-e29b-41d4-a716-446655440000"
+    }
+  ])
+  blogPost_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440007",
+      title: "Understanding Family Law",
+      content: "A guide to the basics of family law.",
+      createdAt: "2023-01-15T00:00:00Z",
+      isPublished: true,
+      tags: ["family law", "legal advice"],
+      authorId: "550e8400-e29b-41d4-a716-446655440001"
+    }
+  ])
+}

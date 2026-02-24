@@ -1,0 +1,54 @@
+type User @table {
+  email: String!
+  displayName: String!
+  createdAt: Timestamp!
+  photoUrl: String
+  role: String
+}
+
+type Service @table {
+  name: String!
+  description: String!
+  createdAt: Timestamp!
+  iconUrl: String
+  priceRange: String
+}
+
+type Testimonial @table {
+  quote: String!
+  clientName: String!
+  createdAt: Timestamp!
+  isApproved: Boolean!
+  clientTitle: String
+  client: User
+}
+
+type BlogPost @table {
+  title: String!
+  content: String!
+  createdAt: Timestamp!
+  isPublished: Boolean!
+  tags: [String]
+  imageUrl: String
+  author: User
+}
+
+type Case @table {
+  caseNumber: String!
+  status: String!
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+  description: String
+  startDate: Date
+  endDate: Date
+  client: User
+  lawyer: User
+}
+
+type Document @table {
+  fileName: String!
+  fileUrl: String!
+  uploadedAt: Timestamp!
+  description: String
+  case: Case
+}
