@@ -1,0 +1,4 @@
+google-cloud-storage==2.14.0
+google-cloud-firestore==2.14.0
+pydantic==2.5.3
+PyPDF2==3.0.1

@@ -1,0 +1,23 @@
+{
+  "gcp_project_number": 209442778661,
+  "evidence_bucket": "videoevidence",
+  "evidence_prefix": "Carter",
+  "derived_bucket": "videoevidence/Carter/derived-artifacts",
+  "export_bucket": "videoevidence/Carter/exports",
+  "gemini_cli_auth_method": "adc",
+  "relevance_rubric": [
+    "incident_core",
+    "lead_up_context",
+    "aftermath",
+    "participants_presence",
+    "wheelchair_context",
+    "weapons_objects",
+    "audio_statements",
+    "bystanders_witnesses",
+    "environment_layout",
+    "time_markers",
+    "law_enforcement_medical",
+    "identity_cues"
+  ],
+  "speech_to_text_enabled": false
+}
