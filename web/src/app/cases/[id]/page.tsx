@@ -6,6 +6,10 @@ import { fetchApi, API_BASE } from "@/lib/api";
 import { useAuth } from "@/components/AuthProvider";
 import { CheckCircle, FileText, Video, Terminal } from "lucide-react";
 
+export function generateStaticParams() {
+    return [{ id: 'Carter' }];
+}
+
 interface CaseDetail {
     case_id: string;
     case_name: string;
