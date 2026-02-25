@@ -19,34 +19,12 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!user) return;
     fetchApi("/cases")
       .then((data) => setCases(data))
       .catch((err) => console.error(err))
       .finally(() => setLoading(false));
   }, [user]);
 
-  if (authLoading) return <div className="text-center py-12">Loading...</div>;
-
-  if (!user) {
-    return (
-      <div className="text-center py-20 max-w-md mx-auto">
-        <Scale className="h-16 w-16 mx-auto text-brand-600 mb-6" />
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
-          Evidence Analyzer
-        </h1>
-        <p className="text-lg text-gray-600 mb-8">
-          Sign in to access case files, review AI-generated timelines, and export evidence summaries.
-        </p>
-        <button
-          onClick={signIn}
-          className="rounded-md bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 w-full"
-        >
-          Sign in with Google
-        </button>
-      </div>
-    );
-  }
 
   return (
     <div>

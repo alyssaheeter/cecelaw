@@ -32,7 +32,6 @@ export default function CaseView() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if (!user) return;
         Promise.all([
             fetchApi(`/cases/${id}`),
             fetchApi(`/cases/${id}/inventory`),
