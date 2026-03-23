@@ -67,3 +67,10 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Environment files — never commit
+.env
+.env.local
+.env.*.local
+config/.env
+infra/.env
