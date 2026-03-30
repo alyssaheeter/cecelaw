@@ -1,4 +1,4 @@
-import type { EvidenceType, EvidenceStatus, ReviewStatus } from '../enums.js';
+import { EvidenceType, EvidenceStatus, ReviewStatus } from '../enums.js';
 
 export interface EvidenceItem {
   id: string;               // UUID — immutable
