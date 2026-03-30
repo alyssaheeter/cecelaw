@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "paths": {
+      "@cece/domain": ["../../packages/domain/src"],
+      "@cece/config": ["../../packages/config/src"],
+      "@cece/analysis": ["../../packages/analysis/src"]
+    }
+  },
+  "include": ["src/**/*", "scripts/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
